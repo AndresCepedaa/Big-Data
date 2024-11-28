@@ -1,4 +1,4 @@
-#Challenge: Investigate the 90% Accuracy Limit
+# Challenge: Investigate the 90% Accuracy Limit
 
 Una de las primeras cosas que identifiqué al analizar el codigo fue la función de activación de utilizada en cada una de las capas de la red, originalmente estaban en tanh, pero se cambiaron a Relu ya que la teoria estipula que esta función de activaión tiene mejor desempeño.
 
@@ -15,4 +15,8 @@ Luego analicé la composición de la red se realizaron ciertas modificaciones
 
 6. Se re distribuyó la base de datos para tener más datos de entrenamiento y menos datos de validación, esto con el objetivo de que el modelo tuviera mas información de la cual aprender patrones. Se dejaron 1000 imagenes para testear el modelo y 64000 para entrenar el modelo.
 
-7. 
+7. Se agregó un tamaño de lote de 256 imagenes, esto porque en un principio no estaba estipulado el tamaño del lote, este parámetro es importante porque si el tamaño es muy pequeño el algoritmo modifica los pesos demasiadas veces loq eu hace que estos valores fluctuen demasiado afectando el accuracy.
+
+8. 
+
+
